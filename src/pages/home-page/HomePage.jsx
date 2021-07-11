@@ -15,7 +15,7 @@ export class HomePage extends PureComponent {
     componentDidMount() {
         let once = true;
         const _this = this;
-        let ws = new WebSocket(" ws://city-ws.herokuapp.com");
+        let ws = new WebSocket("wss://city-ws.herokuapp.com");
         ws.onopen = function (evt) {
             //Subscribe to the channel
             console.log("open", evt);
