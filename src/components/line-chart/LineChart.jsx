@@ -13,6 +13,7 @@ import {
 import "./LineChart.scss";
 import { connect } from "react-redux";
 
+const CHART_MIN_WIDTH = 500;
 class LineChart extends PureComponent {
     constructor(props) {
         super(props);
@@ -34,6 +35,10 @@ class LineChart extends PureComponent {
                 </div>
             );
         }
+        let chartWidth = window.innerWidth - 650;
+        chartWidth =
+            chartWidth < CHART_MIN_WIDTH ? CHART_MIN_WIDTH : chartWidth;
+
         const seriesDataList = getDataSeries(cities, history);
         const { hovered } = this.state;
         return (
@@ -41,7 +46,7 @@ class LineChart extends PureComponent {
                 <XYPlot
                     xType="ordinal"
                     height={500}
-                    width={window.innerWidth - 650}
+                    width={chartWidth}
                     margin={{ bottom: 70 }}
                 >
                     <VerticalGridLines />
@@ -74,7 +79,7 @@ class LineChart extends PureComponent {
                     {hovered && <Hint value={hovered} />}
                     <DiscreteColorLegend
                         orientation="horizontal"
-                        width={window.innerWidth - 650}
+                        width={chartWidth}
                         items={cities}
                     />
                 </XYPlot>

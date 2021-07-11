@@ -52,7 +52,7 @@ export class HomePage extends PureComponent {
     render() {
         return (
             <div className="home-page-container">
-                <div className="heading">Air Quality Monitoring</div>
+                <div className="heading">- Air Quality Monitoring -</div>
                 <div className="body-container">
                     <AqiTable />
                     <LineChart />
