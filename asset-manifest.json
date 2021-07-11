@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/aqi-report/static/css/main.1498ff47.chunk.css",
-    "main.js": "/aqi-report/static/js/main.dd65f01e.chunk.js",
-    "main.js.map": "/aqi-report/static/js/main.dd65f01e.chunk.js.map",
+    "main.js": "/aqi-report/static/js/main.1fc35612.chunk.js",
+    "main.js.map": "/aqi-report/static/js/main.1fc35612.chunk.js.map",
     "runtime-main.js": "/aqi-report/static/js/runtime-main.8c41a9bd.js",
     "runtime-main.js.map": "/aqi-report/static/js/runtime-main.8c41a9bd.js.map",
     "static/css/2.62e7949a.chunk.css": "/aqi-report/static/css/2.62e7949a.chunk.css",
@@ -20,6 +20,6 @@
     "static/css/2.62e7949a.chunk.css",
     "static/js/2.0ad5d019.chunk.js",
     "static/css/main.1498ff47.chunk.css",
-    "static/js/main.dd65f01e.chunk.js"
+    "static/js/main.1fc35612.chunk.js"
   ]
 }
