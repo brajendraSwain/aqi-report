@@ -1,3 +1,5 @@
+export const AQI_WS_URL = "wss://city-ws.herokuapp.com";
+
 export const AQI_COLOR_CLASSES = [
     { class: "good", range: [0, 50] },
     { class: "satisfactory", range: [51, 100] },

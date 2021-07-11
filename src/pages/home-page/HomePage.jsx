@@ -4,6 +4,7 @@ import { addCityData, addToHistory } from "../../redux/aqi/aqi.actions";
 import AqiTable from "../../components/AqiTable/AqiTable";
 import "./HomePage.scss";
 import LineChart from "../../components/line-chart/LineChart";
+import { AQI_WS_URL } from "../../utils/constants";
 export class HomePage extends PureComponent {
     constructor(props) {
         super(props);
@@ -15,10 +16,9 @@ export class HomePage extends PureComponent {
     componentDidMount() {
         let once = true;
         const _this = this;
-        let ws = new WebSocket("wss://city-ws.herokuapp.com");
+        let ws = new WebSocket(AQI_WS_URL);
         ws.onopen = function (evt) {
-            //Subscribe to the channel
-            console.log("open", evt);
+            console.info("ws connection opened", evt);
         };
         ws.onmessage = function (evt) {
             _this.onAQIDataChange(JSON.parse(evt.data));
@@ -29,7 +29,9 @@ export class HomePage extends PureComponent {
             }
             once = false;
         };
-
+        ws.onerror = function (evt) {
+            console.error("ws connection error", evt);
+        };
         setInterval(() => {
             const { dispatch, aqiCityData } = this.props;
             dispatch(addToHistory(aqiCityData));
