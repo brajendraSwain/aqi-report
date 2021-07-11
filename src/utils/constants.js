@@ -1,3 +1,4 @@
+// `wss` required when we serve the site from a secure endpoint 
 export const AQI_WS_URL = "wss://city-ws.herokuapp.com";
 
 export const AQI_COLOR_CLASSES = [
@@ -13,3 +14,6 @@ export const CHANGE_TYPE_CLASS = {
     positive: "positive",
     negative: "negative",
 };
+
+export const LIVE_TRACKING_INTERVAL = 3 ; // in sec
+

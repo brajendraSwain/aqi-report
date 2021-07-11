@@ -1,5 +1,7 @@
-export function getDataSeries(cities, history) {
-    const maxLength = 13;
+import {LIVE_TRACKING_INTERVAL} from "../../utils/constants";
+
+export function getLineDataSeries(cities, history) {
+    const maxLength = 60/LIVE_TRACKING_INTERVAL + 1;
     const len = Math.min(maxLength, history.length);
     const historyToBeIterated =
         history.length > len
@@ -14,7 +16,7 @@ export function getDataSeries(cities, history) {
             const hData = historyToBeIterated[i][city];
 
             const s = {
-                x: `${(len - i - 1) * 5} sec ago`,
+                x: `${(len - i - 1) * LIVE_TRACKING_INTERVAL} sec ago`,
                 y: hData?.aqi || null,
             };
             allSeries[city].push(s);

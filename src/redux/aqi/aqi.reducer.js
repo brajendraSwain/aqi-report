@@ -1,9 +1,5 @@
 const INITIAL_STATE = {
     allCityData: {},
-    sort: {
-        by: "city",
-        order: "asc",
-    },
     history: [],
     citiesInCompare: [],
 };

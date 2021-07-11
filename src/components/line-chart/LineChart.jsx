@@ -12,7 +12,7 @@ import {
 } from "react-vis";
 import "./LineChart.scss";
 import { connect } from "react-redux";
-import { getDataSeries } from "./helpers";
+import { getLineDataSeries } from "./helpers";
 
 const CHART_MIN_WIDTH = 500;
 class LineChart extends PureComponent {
@@ -21,7 +21,6 @@ class LineChart extends PureComponent {
         this.state = {
             hovered: null,
         };
-        this.seriesDataList = [];
     }
 
     render() {
@@ -40,7 +39,7 @@ class LineChart extends PureComponent {
         chartWidth =
             chartWidth < CHART_MIN_WIDTH ? CHART_MIN_WIDTH : chartWidth;
 
-        const seriesDataList = getDataSeries(cities, history);
+        const seriesDataList = getLineDataSeries(cities, history);
         const { hovered } = this.state;
         return (
             <div className="line-container">

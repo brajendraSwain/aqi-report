@@ -4,15 +4,10 @@ import { addCityData, addToHistory } from "../../redux/aqi/aqi.actions";
 import AqiTable from "../../components/AqiTable/AqiTable";
 import "./HomePage.scss";
 import LineChart from "../../components/line-chart/LineChart";
-import { AQI_WS_URL } from "../../utils/constants";
-export class HomePage extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            aqiData: {},
-        };
-    }
+import {AQI_WS_URL, LIVE_TRACKING_INTERVAL} from "../../utils/constants";
 
+export class HomePage extends PureComponent {
+    
     componentDidMount() {
         let once = true;
         const _this = this;
@@ -32,10 +27,11 @@ export class HomePage extends PureComponent {
         ws.onerror = function (evt) {
             console.error("ws connection error", evt);
         };
+
         setInterval(() => {
             const { dispatch, aqiCityData } = this.props;
             dispatch(addToHistory(aqiCityData));
-        }, 5000);
+        }, LIVE_TRACKING_INTERVAL * 1000);
     }
 
     onAQIDataChange(data) {
@@ -44,7 +40,7 @@ export class HomePage extends PureComponent {
         const mappedData = Object.fromEntries(
             data.map((aData) => [
                 aData.city,
-                { ...aData, aqi: +(+aData.aqi).toFixed(2), lastUpdated },
+                { ...aData, aqi: +(aData.aqi.toFixed(2)), lastUpdated },
             ])
         );
 
@@ -54,7 +50,7 @@ export class HomePage extends PureComponent {
     render() {
         return (
             <div className="home-page-container">
-                <div className="heading">- Air Quality Monitoring -</div>
+                <div className="heading"> Air Quality Monitoring </div>
                 <div className="body-container">
                     <AqiTable />
                     <LineChart />

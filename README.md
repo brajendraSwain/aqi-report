@@ -4,16 +4,16 @@
 
 ## About the App
 
-This app shows city wise Air Quality Index in interactive table.
+This app shows city-wise Air Quality Index in an interactive table.
 
 ## Features:
 
--   City wise current AQI(Air Quality Index) are shown in a table.
+-   City-wise current AQI(Air Quality Index) is shown in a table.
 -   AQI changes in realtime
 -   AQI color follows a special color range
--   Whenever there is change in color range, row background highlighted with either green(if new range is of less pollution ie. bad -> good) or red(if new range is of more pollution ie. good -> bad)
--   To see the timeline chart for AQI for specific city, click the respective row in the table
--   `CTRL + CLICK` on rows To add multiple city into the chart to compare
+-   Whenever there is a change in color range, row background highlighted with either green(if the new range is of less pollution ie. bad -> good) or red(if the new range is of more pollution ie. good -> bad)
+-   To see the timeline chart for AQI for a specific city, click the respective row in the table
+-   `CTRL + CLICK` on rows To add multiple cities into the chart to compare
 
 ## Available Scripts
 
