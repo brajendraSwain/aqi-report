@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+
+.aqi-table {
+    border-spacing: 0;
+    tr {
+        &.aqi-row {
+            td:nth-child(2) {
+                font-weight: bold;
+                text-shadow: 0px 1px 2px #000;
+            }
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.01);
+            }
+        }
+        &.aqi-head-row {
+            td {
+                font-weight: bold;
+            }
+        }
+        td.aqi-cell {
+            border: 1px solid $gray-300;
+            border-bottom: none;
+            border-right: none;
+            min-width: 150px;
+            height: 30px;
+            padding: 2px 12px;
+            &:last-child {
+                border-right: 1px solid $gray-300;
+            }
+        }
+        &:last-child {
+            td.aqi-cell {
+                border-bottom: 1px solid $gray-300;
+            }
+        }
+    }
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.bg-animate {
+    transition: background 1s;
+}
