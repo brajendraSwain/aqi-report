@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import "../../../node_modules/react-vis/dist/style.css";
 import {
     XYPlot,
@@ -9,11 +9,9 @@ import {
     LineMarkSeries,
     DiscreteColorLegend,
     Hint,
-    Crosshair,
 } from "react-vis";
 import "./LineChart.scss";
 import { connect } from "react-redux";
-import { PureComponent } from "react";
 
 class LineChart extends PureComponent {
     constructor(props) {

@@ -1,10 +1,10 @@
-import React, { Component, PureComponent } from "react";
+import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import { addCityData, addToHistory } from "../../redux/aqi/aqi.actions";
 import AqiTable from "../../components/AqiTable/AqiTable";
 import "./HomePage.scss";
 import LineChart from "../../components/line-chart/LineChart";
-export class HomePage extends Component {
+export class HomePage extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
