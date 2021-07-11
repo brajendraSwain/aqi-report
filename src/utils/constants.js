@@ -15,5 +15,7 @@ export const CHANGE_TYPE_CLASS = {
     negative: "negative",
 };
 
+export const LIVE_CHART_HEIGHT = 450;
+
 export const LIVE_TRACKING_INTERVAL = 3 ; // in sec
 

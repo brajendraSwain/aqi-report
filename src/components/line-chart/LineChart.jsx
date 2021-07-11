@@ -45,7 +45,7 @@ class LineChart extends PureComponent {
             <div className="line-container">
                 <XYPlot
                     xType="ordinal"
-                    height={500}
+                    height={450}
                     width={chartWidth}
                     margin={{ bottom: 70 }}
                 >
