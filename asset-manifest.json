@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/aqi-report/static/css/main.fda88b79.chunk.css",
-    "main.js": "/aqi-report/static/js/main.4715883c.chunk.js",
-    "main.js.map": "/aqi-report/static/js/main.4715883c.chunk.js.map",
+    "main.css": "/aqi-report/static/css/main.3b084c81.chunk.css",
+    "main.js": "/aqi-report/static/js/main.340ee394.chunk.js",
+    "main.js.map": "/aqi-report/static/js/main.340ee394.chunk.js.map",
     "runtime-main.js": "/aqi-report/static/js/runtime-main.8c41a9bd.js",
     "runtime-main.js.map": "/aqi-report/static/js/runtime-main.8c41a9bd.js.map",
     "static/css/2.62e7949a.chunk.css": "/aqi-report/static/css/2.62e7949a.chunk.css",
@@ -12,14 +12,14 @@
     "static/js/3.f58776a3.chunk.js.map": "/aqi-report/static/js/3.f58776a3.chunk.js.map",
     "index.html": "/aqi-report/index.html",
     "static/css/2.62e7949a.chunk.css.map": "/aqi-report/static/css/2.62e7949a.chunk.css.map",
-    "static/css/main.fda88b79.chunk.css.map": "/aqi-report/static/css/main.fda88b79.chunk.css.map",
+    "static/css/main.3b084c81.chunk.css.map": "/aqi-report/static/css/main.3b084c81.chunk.css.map",
     "static/js/2.fe23a00b.chunk.js.LICENSE.txt": "/aqi-report/static/js/2.fe23a00b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8c41a9bd.js",
     "static/css/2.62e7949a.chunk.css",
     "static/js/2.fe23a00b.chunk.js",
-    "static/css/main.fda88b79.chunk.css",
-    "static/js/main.4715883c.chunk.js"
+    "static/css/main.3b084c81.chunk.css",
+    "static/js/main.340ee394.chunk.js"
   ]
 }
